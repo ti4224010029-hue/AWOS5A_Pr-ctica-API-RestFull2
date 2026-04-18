@@ -1,0 +1,271 @@
+/* ============================================
+   Cliente.css — Estilo Neón / Futurista
+   Paleta: Azules eléctricos + cian + morado neón
+   ============================================ */
+
+:root {
+    --bg-dark: #0a0f1f;
+    --bg-card: #111827;
+    --neon-blue: #00d4ff;
+    --neon-cyan: #00f5ff;
+    --neon-purple: #b000ff;
+    --neon-pink: #ff00a6;
+    --glass-border: rgba(0, 212, 255, 0.3);
+    --text-light: #e2e8f0;
+    --text-muted: #94a3b8;
+    --success: #00ff88;
+    --warning: #ffaa00;
+    --danger: #ff3366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 50%, #1a1a2e 100%);
+    color: var(--text-light);
+    min-height: 100vh;
+}
+
+/* Topbar futurista */
+.topbar {
+    background: rgba(17, 24, 39, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+}
+
+.topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.topbar-brand i {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Main container */
+.main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.75rem;
+    background: linear-gradient(135deg, #fff, var(--neon-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Count badge */
+.count-badge {
+    background: rgba(0, 212, 255, 0.15);
+    border: 1px solid var(--neon-blue);
+    border-radius: 40px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--neon-cyan);
+    backdrop-filter: blur(4px);
+}
+
+/* Buttons futuristas */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--neon-blue), #0088cc);
+    color: #0a0f1f;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    border-color: var(--neon-blue);
+    background: rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Card / Tabla */
+.card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 1rem 1.25rem;
+    background: rgba(0, 212, 255, 0.05);
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--neon-cyan);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    color: var(--text-light);
+}
+
+tr:hover td {
+    background: rgba(0, 212, 255, 0.05);
+}
+
+/* Badge status */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-active {
+    background: rgba(0, 255, 136, 0.15);
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+/* Action links */
+.acciones-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.btn-edit {
+    color: var(--neon-blue);
+}
+
+.btn-edit:hover {
+    background: rgba(0, 212, 255, 0.15);
+    text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.btn-suspend {
+    color: var(--danger);
+}
+
+.btn-suspend:hover {
+    background: rgba(255, 51, 102, 0.15);
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--neon-blue);
+    opacity: 0.5;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-blue);
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main { padding: 1rem; }
+    .section-header { flex-direction: column; align-items: flex-start; }
+    table { font-size: 0.75rem; }
+    th, td { padding: 0.75rem; }
+    .acciones-links { flex-direction: column; gap: 0.5rem; }
+}
